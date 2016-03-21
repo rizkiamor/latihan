@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>jQuery Mobile page</title>
+  <link rel="stylesheet" href="apps/jquery.mobile/jquery.mobile-1.4.0.min.css" />
+  <script src="apps/jquery/jquery-1.10.2.js"></script> 
+  <script src="apps/jquery.mobile/jquery.mobile-1.4.0.min.js"></script> 
+</head>
+<body>
+<!-- page1 -->
+	
+	<div data-role="page" id="page1">
+		<div data-role="header">
+			<h1>BAGUS RIZKI Y</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p>Halaman Pertama</p>
+			<a href="#page2"><button>PAGE 2</button></a>
+		</div>
+		<div data-role="footer">
+			<h4>Coba Cabean</h4>	
+		</div>
+	</div>
+	<!-- /page1 -->
+	
+	<!-- page 2--> 
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h1>BAGUS RIZKI Y</h1>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+		<img src="car.jpg" width="500" height="300">
+			<p></p>
+			<a href="#page1"><button>PAGE 1</button></a>
+			<a href="#page3"><button>PAGE 3</button></a>
+		</div><!-- /content -->
+		<div data-role="footer">
+			<h4>Coba Cabean</h4>
+			
+		</div><!-- /footer -->
+	</div>
+	<!-- /page 2-->
+
+	<!-- page 3--> 
+	<div data-role="page" id="page3">
+		<div data-role="header">
+			<h1>BAGUS RIZKI Y</h1>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<p>Halaman Ketiga</p>
+			<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="arigatau.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+			<a href="#page1"><button>PAGE 1</button></a>
+			<a href="#page2"><button>PAGE 2</button></a>
+		</div><!-- /content -->
+		<div data-role="footer">
+			<h4>Coba Cabean</h4>
+			
+		</div><!-- /footer -->
+	</div>
+	<!-- /page 3-->
+</body>
+
+
+</html>
